@@ -1,66 +1,24 @@
-## Foundry
+# Decentralized Stablecoin Engine (DSC)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A Foundry-based implementation of a decentralized, over-collateralized stablecoin pegged to the US Dollar, featuring algorithmic price feeds, dynamic health factors, and liquidation security incentives.
 
-Foundry consists of:
+## Core Features
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- **Over-collateralization Model:** Users must deposit collateral exceeding the value of the minted stablecoin.
+- **Chainlink Oracle Integration:** Uses live, decentralized price feeds to determine the correct collateral-to-debt ratio.
+- **Security-First Architecture:** Includes automated invariants and integer safety controls to prevent insolvencies or bad debt accumulation.
 
-## Documentation
+## Getting Started
 
-https://book.getfoundry.sh/
+### Prerequisites
 
-## Usage
+Ensure you have [Foundry](https://getfoundry.sh/) installed on your machine.
 
-### Build
+### Installation
 
-```shell
-$ forge build
-```
+Clone the repository and build the contracts:
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+```bash
+git clone [https://github.com/your-username/foundry-defi-stablecoin](https://github.com/your-username/foundry-defi-stablecoin)
+cd foundry-defi-stablecoin
+forge build
